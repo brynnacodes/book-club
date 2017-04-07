@@ -1,4 +1,7 @@
-<p>{{(memberToDisplay | async)?.name}}</p>
-<p>{{(memberToDisplay | async)?.role}}</p>
-<p>{{(memberToDisplay | async)?.favoriteBook}}</p>
-<p>{{(memberToDisplay | async)?.totalRead}}</p>
+<div class="member-detail">  
+  <h2>{{(memberToDisplay | async)?.name}}</h2>
+  <img src="{{(memberToDisplay | async)?.image}}" alt="{{(memberToDisplay | async)?.name}}">
+  <h3>Club role: {{(memberToDisplay | async)?.role}}</h3>
+  <h4>Favorite book: {{(memberToDisplay | async)?.favoriteBook}}</h4>
+  <h4>Total books read: {{(memberToDisplay | async)?.totalRead}}</h4>
+</div>

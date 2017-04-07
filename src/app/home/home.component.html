@@ -1,26 +1,34 @@
-<h3>Book Club Members</h3>
+<div id="quoteDisplay">
+    <!--Quotes will display here-->
+</div>
+<button class="btn quoteButton" (click)="newQuote()"> New Quote
+</button>
 
-<select (change)="onChange($event.target.value)" class="form-group">
-  <option value="allMembers" selected="selected">All members</option>
-  <option value="presidentRole">President</option>
-  <option value="vicePresidentRole">Vice President</option>
-  <option value="creativeDirectorRole"> Creative Director</option>
-  <option value="attendeeRole">Attendees</option>
-</select>
 
-<div class="row member-listing" *ngFor="let member of members | async | role:filterByRole">
-  <div class="col-sm-12">
-    <h2 class="memberName" (click)="goToDetailPage(member)">{{member.name}}</h2>
-    <img src="{{member.image}}" alt="{{member.name}}">
-    <h4>{{member.role}}</h4>
+<div class="container">
+  <h3>Hogwarts Book Club Members</h3>
+  <div class="sortByRole">
+    <p>Sort members by role:</p>
+    <select (change)="onChange($event.target.value)" class="form-group">
+      <option value="allMembers" selected="selected">All members</option>
+      <option value="presidentRole">President</option>
+      <option value="vicePresidentRole">Vice President</option>
+      <option value="creativeDirectorRole"> Creative Director</option>
+      <option value="attendeeRole">Attendees</option>
+    </select>
+  </div>
+  <div class="row member-listing" *ngFor="let member of members | async | role:filterByRole">
+    <div class="col-sm-12">
+      <h3 class="memberName" (click)="goToDetailPage(member)">{{member.name}}</h3>
+      <img src="{{member.image}}" alt="{{member.name}}">
+      <h4>{{member.role}}</h4>
 
-    <div *ngIf="currentRoute === '/admin'">
-      <ul>
-        <li>Favorite book: {{member.favoriteBook}}</li>
-        <li>Total books read: {{member.totalRead}}</li>
-      </ul>
-      <hr>
-      <app-edit-member [selectedMember]="member"></app-edit-member>
+      <div *ngIf="currentRoute === '/admin'">
+        <h4>Favorite book: {{member.favoriteBook}}</h4>
+        <h4>Total books read: {{member.totalRead}}</h4>
+        <hr>
+        <app-edit-member [selectedMember]="member"></app-edit-member>
+      </div>
     </div>
   </div>
 </div>

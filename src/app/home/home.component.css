@@ -7,3 +7,31 @@ img {
   margin-bottom: 30px;
   text-align: center;
 }
+
+.btn {
+  color: black;
+}
+
+select {
+  color: black;
+}
+
+label {
+  color: black;
+}
+
+input {
+  color: black;
+}
+
+.sortByRole {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.quoteButton {
+
+}
