@@ -10,7 +10,7 @@
 
 <div class="row member-listing" *ngFor="let member of members | async | role:filterByRole">
   <div class="col-sm-12">
-    <h2 (click)="goToDetailPage(member)">{{member.name}}</h2>
+    <h2 class="memberName" (click)="goToDetailPage(member)">{{member.name}}</h2>
     <img src="{{member.image}}" alt="{{member.name}}">
     <h4>{{member.role}}</h4>
 

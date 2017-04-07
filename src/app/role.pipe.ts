@@ -12,28 +12,28 @@ export class RolePipe implements PipeTransform {
     var output: any[] = [];
     if (desiredRole === 'presidentRole') {
       for (let i = 0; i < input.length; i++) {
-        if (input[i].role === 'president') {
+        if (input[i].role === 'President') {
           output.push(input[i]);
         }
       }
       return output;
     } else if (desiredRole === 'vicePresidentRole') {
         for (let i = 0; i < input.length; i++) {
-          if (input[i].role === 'vice-president') {
+          if (input[i].role === 'Vice President') {
             output.push(input[i]);
         }
       }
       return output;
     } else if (desiredRole === 'creativeDirectorRole') {
         for (let i = 0; i < input.length; i++) {
-          if (input[i].role === 'creative-director') {
+          if (input[i].role === 'Creative Director') {
             output.push(input[i]);
         }
       }
       return output;
     } else if (desiredRole === 'attendeeRole') {
         for (let i = 0; i < input.length; i++) {
-          if (input[i].role === 'attendee') {
+          if (input[i].role === 'Attendee') {
             output.push(input[i]);
         }
       }

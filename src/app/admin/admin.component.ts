@@ -25,6 +25,5 @@ export class AdminComponent implements OnInit {
 
   onChange(optionFromMenu: string) {
     this.updateCheckedRole = optionFromMenu;
-    console.log(this.updateCheckedRole);
   }
 }
