@@ -1,15 +1,20 @@
 <div class="new-member">
   <h1>Admin Tools</h1>
   <h3>Add New Club Member</h3>
+
   <div class="form-group">
     <label>Name:</label>
     <input #newName>
   </div>
 
-  <div class="form-group">
-    <label>Role:</label>
-    <input #newRole>
-  </div>
+  <select (change)="onChange($event.target.value)" class="form-group">
+    <option value="" selected="selected">Choose a role</option>
+    <option value="attendee">Attendee</option>
+    <option value="president">President</option>
+    <option value="vice-president">Vice President</option>
+    <option value="creative-director"> Creative Director</option>
+    <option value="attendee">Attendees</option>
+  </select>
 
   <div class="form-group">
     <label>Favorite Book:</label>
@@ -26,7 +31,7 @@
     <input #newImage>
   </div>
 
-  <button class="btn" (click)="submitForm(newName.value, newRole.value, newFavoriteBook.value, newTotalRead.value, newImage.value); newName.value=''; newRole.value=''; newFavoriteBook.value=''; newTotalRead.value=''; newImage.value=''">Add</button>
+  <button class="btn" (click)="submitForm(newName.value, newFavoriteBook.value, newTotalRead.value, newImage.value); newName.value=''; newFavoriteBook.value=''; newTotalRead.value=''; newImage.value=''">Add</button>
 </div>
 <div>
   <app-home></app-home>

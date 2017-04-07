@@ -26,7 +26,7 @@ export class RolePipe implements PipeTransform {
       return output;
     } else if (desiredRole === 'creativeDirectorRole') {
         for (let i = 0; i < input.length; i++) {
-          if (input[i].role === 'creative director') {
+          if (input[i].role === 'creative-director') {
             output.push(input[i]);
         }
       }

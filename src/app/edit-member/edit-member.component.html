@@ -4,9 +4,11 @@
 <input [(ngModel)]="selectedMember.name">
 <br>
 
-<label>New Role:</label>
-<input [(ngModel)]="selectedMember.role">
-<br>
+<div *ngFor="let role of roles" [(ngModel)]="selectedMember.role">
+      <label>{{role.display}}</label>
+      <input type="checkbox" value="{{role.value}}"
+        (click)="check(role.value)">
+</div>
 
 <label>New Favorite Book:</label>
 <input [(ngModel)]="selectedMember.favoriteBook">
