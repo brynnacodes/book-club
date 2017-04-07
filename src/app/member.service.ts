@@ -8,10 +8,13 @@ export class MemberService {
 
   constructor(private angularFire: AngularFire) {
     this.members = angularFire.database.list('members');
-    console.log(this.members);
   }
 
   getMembers() {
     return this.members;
+  }
+
+  getMemberById(memberId: number) {
+    return this.angularFire.database.object('members/' + memberId);
   }
 }

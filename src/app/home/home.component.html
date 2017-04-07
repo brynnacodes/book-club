@@ -1,6 +1,11 @@
-<h1>Home works!</h1>
-<div *ngFor="let member of members | async">
-  <ul>
-    <li>{{member.name}}</li>
-  </ul>
+<h1>Hogwarts School of Witchcraft and Wizardry Book Club</h1>
+<h3>Book Club Members</h3>
+<div *ngFor="let member of members | async" (click)="goToDetailPage(member)">
+  <div class="member-listing">
+    <h4>{{member.name}}</h4>
+    <ul>
+      <li>Role: {{member.role}}</li>
+      <li>Favorite book: {{member.favoriteBook}}</li>
+    </ul>
+  </div>
 </div>

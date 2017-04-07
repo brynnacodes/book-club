@@ -18,4 +18,8 @@ export class HomeComponent implements OnInit {
     this.members = this.memberService.getMembers();
   }
 
+  goToDetailPage(member) {
+    this.router.navigate(['members', member.$key]);
+  }
+
 }
