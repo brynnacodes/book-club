@@ -11,6 +11,7 @@ import { MemberService } from './../member.service';
 })
 export class HomeComponent implements OnInit {
  members: FirebaseListObservable<any[]>;
+ currentRoute: string = this.router.url;
 
   constructor(private memberService: MemberService, private router: Router) { }
 

@@ -1,11 +1,15 @@
 <h1>Hogwarts School of Witchcraft and Wizardry Book Club</h1>
 <h3>Book Club Members</h3>
-<div *ngFor="let member of members | async" (click)="goToDetailPage(member)">
-  <div class="member-listing">
-    <h4>{{member.name}}</h4>
+
+<div *ngFor="let member of members | async">
+    <h2 (click)="goToDetailPage(member)">{{member.name}}</h2>
+    <h4>{{member.role}}</h4>
+
+  <div *ngIf="currentRoute === '/admin'">
     <ul>
-      <li>Role: {{member.role}}</li>
       <li>Favorite book: {{member.favoriteBook}}</li>
+      <li>Total books read: {{member.totalRead}}</li>
     </ul>
+    <app-edit-member [selectedMember]="member"></app-edit-member>
   </div>
 </div>

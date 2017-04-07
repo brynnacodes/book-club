@@ -1,0 +1,31 @@
+<h3>Add New Club Member</h3>
+<div>
+  <div>
+    <label>Name:</label>
+    <br>
+    <input #newName>
+  </div>
+
+  <div>
+    <label>Role:</label>
+    <br>
+    <input #newRole>
+  </div>
+
+  <div>
+    <label>Favorite Book:</label>
+    <br>
+    <input #newFavoriteBook>
+  </div>
+
+  <div>
+    <label>Total Books Read</label>
+    <br>
+    <input type="number" #newTotalRead>
+  </div>
+
+  <button (click)="submitForm(newName.value, newRole.value, newFavoriteBook.value, newTotalRead.value); newName.value=''; newRole.value=''; newFavoriteBook.value=''; newTotalRead.value=''">Add</button>
+</div>
+<div class="">
+  <app-home></app-home>
+</div>
