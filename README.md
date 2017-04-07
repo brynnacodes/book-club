@@ -1,6 +1,6 @@
 # BookClub
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+A website and roster for the Hogwarts Book Club to keep track of member info, favorite books, and total books read. Mischief managed!
 
 ## Prerequisites
 
