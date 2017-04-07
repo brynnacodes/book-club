@@ -1,0 +1,18 @@
+{
+  "members": [{
+    "name": "Harry Potter",
+    "role": "President",
+    "favoriteBook": "Advanced Potion-Making",
+    "totalRead": 4
+  }, {
+    "name": "Ron Weasley",
+    "role": "Vice-President",
+    "favoriteBook": "Advanced Potion-Making",
+    "totalRead": 1
+  }, {
+    "name": "Hermione Granger",
+    "role": "Creative Director",
+    "favoriteBook": "A History of House Elves",
+    "totalRead": 100
+  }]
+}
