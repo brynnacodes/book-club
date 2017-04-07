@@ -21,4 +21,12 @@ export class MemberService {
   getMemberById(memberId: number) {
     return this.angularFire.database.object('members/' + memberId);
   }
+
+  updateMember(localUpdatedMember){
+    let memberEntryInFirebase = this.getMemberById(localUpdatedMember.$key);
+    memberEntryInFirebase.update({name: localUpdatedMember.name,
+                                role: localUpdatedMember.role,
+                                favoriteBook: localUpdatedMember.favoriteBook,
+                                totalRead: localUpdatedMember.totalRead});
+  }
 }
