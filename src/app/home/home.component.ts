@@ -12,6 +12,7 @@ import { MemberService } from './../member.service';
 export class HomeComponent implements OnInit {
  members: FirebaseListObservable<any[]>;
  currentRoute: string = this.router.url;
+ filterByRole: string = "allMembers";
 
   constructor(private memberService: MemberService, private router: Router) { }
 
@@ -21,6 +22,10 @@ export class HomeComponent implements OnInit {
 
   goToDetailPage(member) {
     this.router.navigate(['members', member.$key]);
+  }
+
+  onChange(optionFromMenu: string) {
+    this.filterByRole = optionFromMenu;
   }
 
 }

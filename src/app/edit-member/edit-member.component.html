@@ -14,6 +14,10 @@
 
 <label>New Total Books Read:</label>
 <input [(ngModel)]="selectedMember.totalRead">
+<br>
 
-<button (click)="beginUpdatingMember(selectedMember)">Update</button>
-<button (click)="beginDeletingMember(selectedMember)">Delete</button>
+<label>New Image:</label>
+<input [(ngModel)]="selectedMember.image">
+
+<button class="btn" (click)="beginUpdatingMember(selectedMember)">Update</button>
+<button class="btn" (click)="beginDeletingMember(selectedMember)">Delete</button>

@@ -1,4 +1,9 @@
-h1 {
+img {
+  width: 200px;
+  border-radius: 10%;
+}
+
+.member-listing {
+  margin-bottom: 30px;
   text-align: center;
-  font-family: 'Cinzel', serif;
 }

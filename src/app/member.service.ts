@@ -27,7 +27,8 @@ export class MemberService {
     memberEntryInFirebase.update({name: localUpdatedMember.name,
                                 role: localUpdatedMember.role,
                                 favoriteBook: localUpdatedMember.favoriteBook,
-                                totalRead: localUpdatedMember.totalRead});
+                                totalRead: localUpdatedMember.totalRead,
+                                image: localUpdatedMember.image});
   }
 
   deleteMember(localMemberToDelete) {
