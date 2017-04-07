@@ -29,4 +29,9 @@ export class MemberService {
                                 favoriteBook: localUpdatedMember.favoriteBook,
                                 totalRead: localUpdatedMember.totalRead});
   }
+
+  deleteMember(localMemberToDelete) {
+   let memberEntryInFirebase = this.getMemberById(localMemberToDelete.$key);
+   memberEntryInFirebase.remove();
+  }
 }
