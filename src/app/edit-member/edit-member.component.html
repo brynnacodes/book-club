@@ -4,11 +4,15 @@
 <input [(ngModel)]="selectedMember.name">
 <br>
 
-<div *ngFor="let role of roles" [(ngModel)]="selectedMember.role">
-      <label>{{role.display}}</label>
-      <input type="checkbox" value="{{role.value}}"
-        (click)="check(role.value)">
-</div>
+<select [(ngModel)] ="selectedMember.role" (change)="onChange($event.target.value)" class="form-group">
+  <option value="" selected="selected">Choose a role</option>
+  <option value="attendee">Attendee</option>
+  <option value="president">President</option>
+  <option value="vice-president">Vice President</option>
+  <option value="creative-director"> Creative Director</option>
+  <option value="attendee">Attendees</option>
+</select>
+<br>
 
 <label>New Favorite Book:</label>
 <input [(ngModel)]="selectedMember.favoriteBook">

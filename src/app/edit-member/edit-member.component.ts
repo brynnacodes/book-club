@@ -10,6 +10,7 @@ import { MemberService } from '../member.service';
 })
 export class EditMemberComponent implements OnInit {
   @Input() selectedMember;
+  updateCheckedRole;
 
   constructor(private memberService: MemberService) { }
 
@@ -24,6 +25,10 @@ export class EditMemberComponent implements OnInit {
     if(confirm("Are you sure you want to delete this member?")){
       this.memberService.deleteMember(memberToDelete);
     }
+  }
+
+  onChange(optionFromMenu: string) {
+    this.updateCheckedRole = optionFromMenu;
   }
 
 }
