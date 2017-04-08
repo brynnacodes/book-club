@@ -1,28 +1,39 @@
 <h4>Edit Member Details</h4>
 
-<label>New Name:</label>
-<input [(ngModel)]="selectedMember.name">
+<div class="form-group">
+  <label>New Name:</label>
+  <input [(ngModel)]="selectedMember.name">
+</div>
 <br>
 
-<select [(ngModel)] ="selectedMember.role" (change)="onChange($event.target.value)" class="form-group">
-  <option value="" selected="selected">Choose a role</option>
-  <option value="Attendee">Attendee</option>
-  <option value="President">President</option>
-  <option value="Vice President">Vice President</option>
-  <option value="Creative Director"> Creative Director</option>
-</select>
+<div class="form-group">
+  <label>New role:</label>
+  <select [(ngModel)] ="selectedMember.role" (change)="onChange($event.target.value)" class="form-group">
+    <option value="" selected="selected">Choose a role</option>
+    <option value="Attendee">Attendee</option>
+    <option value="President">President</option>
+    <option value="Vice President">Vice President</option>
+    <option value="Creative Director"> Creative Director</option>
+  </select>
+</div>
 <br>
 
-<label>New Favorite Book:</label>
-<input [(ngModel)]="selectedMember.favoriteBook">
+<div class="form-group">
+  <label>New Favorite Book:</label>
+  <input [(ngModel)]="selectedMember.favoriteBook">
+</div>
 <br>
 
-<label>New Total Books Read:</label>
-<input [(ngModel)]="selectedMember.totalRead">
+<div class="form-group">
+  <label>New Total Books Read:</label>
+  <input [(ngModel)]="selectedMember.totalRead">
+</div>
 <br>
 
-<label>New Image:</label>
-<input [(ngModel)]="selectedMember.image">
+<div class="form-group">
+  <label>New Image:</label>
+  <input [(ngModel)]="selectedMember.image">
+</div>
 
 <button class="btn" (click)="beginUpdatingMember(selectedMember)">Update</button>
 <button class="btn" (click)="beginDeletingMember(selectedMember)">Delete</button>

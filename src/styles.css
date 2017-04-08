@@ -6,7 +6,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  color: antiquewhite;
+  color: #FDF7EF;
 }
 
 .container-fluid {
@@ -14,4 +14,10 @@
 }
 
 .memberName {
+}
+
+.btn {
+  background-color: #6c3fc6;
+  color: #FDF7EF;
+  border: 1px solid darkgrey;
 }

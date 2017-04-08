@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
   }
 
   quotes = [
-    "You're a wizard, Harry. - Hagrid",
+    "Yer a wizard, Harry. - Hagrid",
     "We could all have been killed - or worse, expelled. - Hermione Granger",
     "Not my daughter, you bitch! - Mrs. Weasley",
     "Never trust anything that can think for itself if you can't see where it keeps its brain. -Mrs. Weasley",
@@ -51,7 +51,5 @@ export class HomeComponent implements OnInit {
     "It's wingardium leviOsa, not leviosAH. - Hermione Granger",
     "We've all got both light and dark inside us. What matters is the part we choose to act on. That's who we really are. -Sirius Black",
     "Oculus Reparo! -Hermione Granger"
-  ]
-
-
+  ];
 }

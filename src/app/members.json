@@ -3,16 +3,19 @@
     "name": "Harry Potter",
     "role": "President",
     "favoriteBook": "Advanced Potion-Making",
-    "totalRead": 4
+    "totalRead": 4,
+    "image":
   }, {
     "name": "Ron Weasley",
     "role": "Vice-President",
     "favoriteBook": "Advanced Potion-Making",
-    "totalRead": 1
+    "totalRead": 1,
+    "image": "http://az616578.vo.msecnd.net/files/2016/09/11/6360915164378721451510477682_Ron-Weasley-Pictures-From-Harry-Potter-Movies.jpg"
   }, {
     "name": "Hermione Granger",
     "role": "Creative Director",
     "favoriteBook": "A History of House Elves",
-    "totalRead": 100
+    "totalRead": 100,
+    "image": "http://static2.hypable.com/wp-content/uploads/2015/09/Hermione-Granger.jpg"
   }]
 }
